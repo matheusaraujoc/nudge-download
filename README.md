@@ -10,7 +10,7 @@ Este repositório contém o **site de download** e os **instaladores oficiais** 
 
 ## Download
 
-**[⬇ Baixar nudge 1.5.3 para Windows](https://github.com/matheusaraujoc/nudge-download/releases/download/1.5.3/Nudge-Setup-1.5.3.exe)**
+**[Baixar nudge 1.5.3 para Windows](https://github.com/matheusaraujoc/nudge-download/releases/download/1.5.3/Nudge-Setup-1.5.3.exe)**
 · Windows 10/11 64-bit · ~27 MB · gratuito
 
 1. Baixe e execute o `Nudge-Setup-1.5.3.exe`.
