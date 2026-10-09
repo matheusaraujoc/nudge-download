@@ -1,16 +1,16 @@
-# Site do nudge (protótipo)
+# Site do nudge
 
 Página estática única (`index.html`), sem build. Abra direto no navegador para testar.
 
 ## Instalador
 
-O botão aponta para `downloads/Nudge-Setup-1.5.3.exe`. Copie o instalador gerado pelo Inno Setup
-(`build/installer/`) para `site/downloads/`.
+Os botões apontam para o GitHub Release:
+https://github.com/matheusaraujoc/nudge-download/releases/download/1.5.3/Nudge-Setup-1.5.3.exe
 
-- Cloudflare Pages limita cada arquivo a 25 MB; o GitHub não aceita arquivos acima de 100 MB no repositório.
-  Se o instalador passar disso, publique-o em um GitHub Release e troque os dois `href` do botão pelo link do release.
+Para uma nova versão: crie um Release com a tag da versão, anexe `Nudge-Setup-<versão>.exe`
+e atualize a versão no `index.html` (links, linha do hero, seção de download e rodapé).
 
 ## Publicar
 
-- **GitHub Pages:** Settings → Pages → publicar a pasta `site/` (via Actions) ou mover o conteúdo para `docs/`.
-- **Cloudflare Pages:** `npx wrangler pages deploy site` ou conectar o repositório com "Build output directory" = `site`.
+- **GitHub Pages:** Settings → Pages → Deploy from branch `main` / raiz.
+- **Cloudflare Pages:** conectar o repositório, sem comando de build, output directory = `/`.

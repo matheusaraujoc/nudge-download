@@ -1,6 +1,6 @@
 # nudge — site de download
 
-> Site estático de uma página para divulgar e distribuir o instalador Windows do nudge, um app desktop (Python + PySide6) de pensamento visual: canvas infinito com notas, conexões e territórios, offline-first (SQLite local), flashcards com IA (Gemini) exportáveis para o Anki e um "Modo Fantasma" (janela transparente). Protótipo, pensado para GitHub Pages ou Cloudflare Pages.
+> Site estático de uma página para divulgar e distribuir o instalador Windows do nudge, um app desktop (Python + PySide6) de pensamento visual: canvas infinito com notas, conexões e territórios, offline-first (SQLite local), flashcards com IA (Gemini) exportáveis para o Anki e um "Modo Fantasma" (janela transparente). Versão estável, publicada via para GitHub Pages ou Cloudflare Pages.
 
 Pontos importantes:
 - Sem build, sem framework, sem JavaScript: HTML + CSS inline em `index.html`. Abrir o arquivo no navegador já mostra o site.
@@ -19,12 +19,12 @@ Pontos importantes:
 
 - [index.html](index.html): página inteira — cabeçalho, hero com mini-canvas decorativo (notas, fios em SVG e um território), grade de recursos e seção de download com instruções (inclui aviso do SmartScreen)
 - [favicon.ico](favicon.ico): ícone do app
-- [downloads/](downloads/): instalador `Nudge-Setup-1.5.3.exe` (~27,3 MB)
+- Instalador: hospedado no GitHub Release `1.5.3` (~27,3 MB), não versionado no repositório
 - [README.md](README.md): como publicar
 
 ## Atualizar a versão
 
-A versão atual é 1.5.3 e aparece em 4 lugares do `index.html`: os dois `href` dos botões de download, a linha "Versão 1.5.3" do hero e o texto da seção de download (título da versão e nome do arquivo). Trocar todos ao publicar uma nova versão e substituir o `.exe` em `downloads/`.
+A versão atual é 1.5.3 e aparece em 4 lugares do `index.html`: os dois `href` dos botões de download (link `releases/download/<versão>/Nudge-Setup-<versão>.exe`), a linha "Versão 1.5.3" do hero e o texto da seção de download (título da versão e nome do arquivo). Trocar todos ao publicar uma nova versão e publicar o novo `.exe` num GitHub Release com a tag da versão.
 
 ## Hospedagem
 
