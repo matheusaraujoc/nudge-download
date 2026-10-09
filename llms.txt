@@ -1,0 +1,36 @@
+# nudge — site de download
+
+> Site estático de uma página para divulgar e distribuir o instalador Windows do nudge, um app desktop (Python + PySide6) de pensamento visual: canvas infinito com notas, conexões e territórios, offline-first (SQLite local), flashcards com IA (Gemini) exportáveis para o Anki e um "Modo Fantasma" (janela transparente). Protótipo, pensado para GitHub Pages ou Cloudflare Pages.
+
+Pontos importantes:
+- Sem build, sem framework, sem JavaScript: HTML + CSS inline em `index.html`. Abrir o arquivo no navegador já mostra o site.
+- Idioma do conteúdo: português (pt-BR).
+- O código-fonte do app NÃO está neste projeto; o site só distribui o instalador gerado lá (Nuitka → `main.exe`; Inno Setup → `Nudge-Setup-<versão>.exe`).
+- Estética copiada do app (`ui/theme.py` do projeto do nudge). Manter fiel a ele:
+  - Fundo `#202124` com grid de pontos `#303134` (24px); divisórias `#333538`.
+  - Cartões `#2C2D30` (hover `#35363A`), borda `#444649`, título `#E8EAED`, corpo `#BDC1C6`, texto secundário `#9AA0A6`.
+  - Destaque principal âmbar `#E8855A` (hover `#FF9D73`); acentos de nota: teal `#5BC4A4`, sky `#5A9FE8`, rose `#E85A7A`, lime `#8EBF5A`, violet `#9A7AE8`; fios `#5F6368`.
+  - Fontes: Georgia (marca e títulos), Helvetica Neue (interface). Marca: `◈ nudge`.
+  - Os "cards" do site imitam notas do app: borda superior colorida de 3px (variável CSS `--c`).
+- Tema só escuro (o app também é só escuro).
+- Responsivo: abaixo de 760px o mini-canvas decorativo some e os recursos viram uma coluna.
+
+## Arquivos
+
+- [index.html](index.html): página inteira — cabeçalho, hero com mini-canvas decorativo (notas, fios em SVG e um território), grade de recursos e seção de download com instruções (inclui aviso do SmartScreen)
+- [favicon.ico](favicon.ico): ícone do app
+- [downloads/](downloads/): instalador `Nudge-Setup-1.5.3.exe` (~27,3 MB)
+- [README.md](README.md): como publicar
+
+## Atualizar a versão
+
+A versão atual é 1.5.3 e aparece em 4 lugares do `index.html`: os dois `href` dos botões de download, a linha "Versão 1.5.3" do hero e o texto da seção de download (título da versão e nome do arquivo). Trocar todos ao publicar uma nova versão e substituir o `.exe` em `downloads/`.
+
+## Hospedagem
+
+- GitHub Pages: aceita o instalador no repositório (limite de 100 MB por arquivo).
+- Cloudflare Pages: limite de 25 MiB por arquivo — o instalador (27,3 MB) NÃO cabe. Publicar o `.exe` num GitHub Release e apontar os botões para o link do release. Essa também é a opção recomendada em geral, para não versionar binários no git.
+
+## Optional
+
+- Ideias futuras: link para o GitHub Release automático (`/releases/latest/download/...`), capturas de tela reais do app, página de changelog, assinatura de código para evitar o aviso do SmartScreen.
