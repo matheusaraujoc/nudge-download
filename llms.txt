@@ -19,12 +19,12 @@ Pontos importantes:
 
 - [index.html](index.html): página inteira — cabeçalho, hero com mini-canvas decorativo (notas, fios em SVG e um território), grade de recursos e seção de download com instruções (inclui aviso do SmartScreen)
 - [favicon.ico](favicon.ico): ícone do app
-- Instalador: hospedado no GitHub Release `1.5.5` (~27,3 MB), não versionado no repositório
+- Instalador: hospedado no GitHub Release `1.5.6` (~27,3 MB), não versionado no repositório
 - [README.md](README.md): como publicar
 
 ## Atualizar a versão
 
-A versão atual é 1.5.5 e aparece em 4 lugares do `index.html`: os dois `href` dos botões de download (link `releases/download/<versão>/Nudge-Setup-<versão>.exe`), a linha "Versão 1.5.5" do hero e o texto da seção de download (título da versão e nome do arquivo). Trocar todos ao publicar uma nova versão e publicar o novo `.exe` num GitHub Release com a tag da versão.
+A versão atual é 1.5.6 e aparece em 4 lugares do `index.html`: os dois `href` dos botões de download (link `releases/download/<versão>/Nudge-Setup-<versão>.exe`), a linha "Versão 1.5.6" do hero e o texto da seção de download (título da versão e nome do arquivo). Trocar todos ao publicar uma nova versão e publicar o novo `.exe` num GitHub Release com a tag da versão.
 
 ## Hospedagem
 
